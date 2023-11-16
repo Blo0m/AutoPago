@@ -15,7 +15,7 @@ import pe.com.AutoPago.Profile.interfaces.rest.transform.CreateUserCommandFromRe
 import pe.com.AutoPago.Profile.interfaces.rest.transform.UserResourceFromEntityAssembler;
 
 @RestController
-@RequestMapping(value = "/api.v1/users", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/api/v1/users", produces = MediaType.APPLICATION_JSON_VALUE)
 @Tag(name = "Users", description = "Users Management Endpoints")
 public class UserController {
     private final UserQueryService userQueryService;
