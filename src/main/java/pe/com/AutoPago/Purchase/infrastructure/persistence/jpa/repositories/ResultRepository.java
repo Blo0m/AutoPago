@@ -1,7 +1,7 @@
 package pe.com.AutoPago.Purchase.infrastructure.persistence.jpa.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import pe.com.AutoPago.Purchase.domain.model.entities.Purchase;
+import pe.com.AutoPago.Purchase.domain.model.aggregates.Result;
 
-public interface PurchaseRepository extends JpaRepository<Purchase, Long> {
+public interface ResultRepository extends JpaRepository<Result, Long>{
 }

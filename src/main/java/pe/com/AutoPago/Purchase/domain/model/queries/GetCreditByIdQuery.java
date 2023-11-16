@@ -1,4 +1,4 @@
 package pe.com.AutoPago.Purchase.domain.model.queries;
 
-public record GetAllPurchasesQuery() {
+public record GetCreditByIdQuery(Long id) {
 }
