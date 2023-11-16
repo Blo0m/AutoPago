@@ -5,7 +5,7 @@ import pe.com.AutoPago.Purchase.interfaces.rest.resources.ResultResource;
 
 public class ResultResourceFromEntityAssembler {
     public static ResultResource toResourceFromEntity(Result entity) {
-        return new ResultResource(entity.getId(), entity.getInterest(), entity.getLifeInsurance(), entity.getFee(), entity.getAmortization(),
+        return new ResultResource(entity.getId(), entity.getN(),entity.getInterest(), entity.getLifeInsurance(), entity.getFee(), entity.getAmortization(),
                 entity.getBalance(), entity.getFinalBalance(), entity.getFlow(), entity.getRiskInsurance(), entity.getGps(),
                 entity.getPorts(), entity.getAdminBills(), entity.getCredit().getId());
     }
