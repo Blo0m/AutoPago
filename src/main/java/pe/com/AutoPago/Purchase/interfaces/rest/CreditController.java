@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping(value = "/api.v1/credits", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/api/v1/credits", produces = MediaType.APPLICATION_JSON_VALUE)
 @Tag(name = "Credits", description = "credits Management Endpoints")
 public class CreditController {
     private final CreditQueryService creditQueryService;
