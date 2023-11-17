@@ -74,6 +74,9 @@ public class Credit {
     private Long riskInsurancePercentage;
 
     @Getter
+    private Long cok;
+
+    @Getter
     private String initialDate;
 
     @Getter
@@ -85,7 +88,7 @@ public class Credit {
     public Credit(String currency, Long vehiclePrice, Long feeNumber, Long initialFeeAmount, String url, String gracePeriodType,
                   Long gracePeriodFeeNumber, String interestRateType, Long interestRatePercentage, Long notarialCost, Long registerCost,
                   Long gps, Long ports, Long administrationBills, Long lifeInsurancePercentage, Long riskInsurancePercentage,
-                  String initialDate, String finalDate) {
+                  Long cok, String initialDate, String finalDate) {
         this.currency = currency;
         this.vehiclePrice = vehiclePrice;
         this.feeNumber = feeNumber;
@@ -102,6 +105,7 @@ public class Credit {
         this.administrationBills = administrationBills;
         this.lifeInsurancePercentage = lifeInsurancePercentage;
         this.riskInsurancePercentage = riskInsurancePercentage;
+        this.cok = cok;
         this.initialDate = initialDate;
         this.finalDate = finalDate;
     }
