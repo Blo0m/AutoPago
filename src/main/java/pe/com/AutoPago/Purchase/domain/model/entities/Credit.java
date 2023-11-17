@@ -16,7 +16,6 @@ public class Credit {
     @Getter
     private String currency;
 
-
     @PositiveOrZero
     @Getter
     private Long vehiclePrice;
@@ -83,7 +82,10 @@ public class Credit {
     public Credit() {
     }
 
-    public Credit(String currency, Long vehiclePrice, Long feeNumber, Long initialFeeAmount, String url, String gracePeriodType, Long gracePeriodFeeNumber, String interestRateType, Long interestRatePercentage, Long notarialCost, Long registerCost, Long gps, Long ports, Long administrationBills, Long lifeInsurancePercentage, Long riskInsurancePercentage, String initialDate, String finalDate) {
+    public Credit(String currency, Long vehiclePrice, Long feeNumber, Long initialFeeAmount, String url, String gracePeriodType,
+                  Long gracePeriodFeeNumber, String interestRateType, Long interestRatePercentage, Long notarialCost, Long registerCost,
+                  Long gps, Long ports, Long administrationBills, Long lifeInsurancePercentage, Long riskInsurancePercentage,
+                  String initialDate, String finalDate) {
         this.currency = currency;
         this.vehiclePrice = vehiclePrice;
         this.feeNumber = feeNumber;
