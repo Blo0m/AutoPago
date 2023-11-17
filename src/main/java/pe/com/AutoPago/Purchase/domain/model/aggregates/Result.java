@@ -16,6 +16,9 @@ public class Result {
     private Long n;
 
     @Getter
+    private String graceType;
+
+    @Getter
     private Double interest;
 
     @Getter
@@ -56,9 +59,10 @@ public class Result {
     public Result() {
     }
 
-    public Result(Long n,Double interest, Double lifeInsurance, Double fee, Double amortization, Double balance, Double finalBalance,
+    public Result(Long n, String graceType, Double interest, Double lifeInsurance, Double fee, Double amortization, Double balance, Double finalBalance,
                   Double flow, Double riskInsurance, Double gps, Double ports, Double adminBills, Credit credit) {
         this.n = n;
+        this.graceType = graceType;
         this.interest = interest;
         this.lifeInsurance = lifeInsurance;
         this.fee = fee;
