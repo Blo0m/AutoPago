@@ -18,7 +18,7 @@ public class CreditCommandServiceImpl implements CreditCommandService {
     @Override
     public Long handle(CreateCreditCommand command) {
         var credit = new Credit(command.currency(), command.vehiclePrice(), command.feeNumber(),
-                command.initialFeeAmount(), command.url(), command.gracePeriodType(), command.gracePeriodFeeNumber(),
+                command.initialFeePercentage(), command.finalFeePercentage(), command.url(), command.gracePeriodType(), command.gracePeriodFeeNumber(),
                 command.interestRateType(), command.interestRatePercentage(), command.notarialCost(), command.registerCost(),
                 command.gps(), command.ports(), command.administrationBills(), command.lifeInsurancePercentage(),
                 command.riskInsurancePercentage(), command.cok(), command.initialDate(), command.finalDate());

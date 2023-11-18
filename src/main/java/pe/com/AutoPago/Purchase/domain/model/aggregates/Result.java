@@ -19,7 +19,22 @@ public class Result {
     private String graceType;
 
     @Getter
-    private Long cok;
+    private Double cok;
+
+    @Getter
+    private Double balanceFinalFee;
+
+    @Getter
+    private Double interestFinalFee;
+
+    @Getter
+    private Double amortizationFinalFee;
+
+    @Getter
+    private Double lifeInsuranceFinalFee;
+
+    @Getter
+    private Double finalBalanceFinalFee;
 
     @Getter
     private Double interest;
@@ -62,11 +77,18 @@ public class Result {
     public Result() {
     }
 
-    public Result(Long n, String graceType, Long cok, Double interest, Double lifeInsurance, Double fee, Double amortization, Double balance, Double finalBalance,
-                  Double flow, Double riskInsurance, Double gps, Double ports, Double adminBills, Credit credit) {
+    public Result(Long n, String graceType, Double cok, Double balanceFinalFee, Double interestFinalFee, Double amortizationFinalFee,
+                  Double lifeInsuranceFinalFee, Double finalBalanceFinalFee, Double interest, Double lifeInsurance, Double fee,
+                  Double amortization, Double balance, Double finalBalance, Double flow, Double riskInsurance,
+                  Double gps, Double ports, Double adminBills, Credit credit) {
         this.n = n;
         this.graceType = graceType;
         this.cok = cok;
+        this.balanceFinalFee = balanceFinalFee;
+        this.interestFinalFee = interestFinalFee;
+        this.amortizationFinalFee = amortizationFinalFee;
+        this.lifeInsuranceFinalFee = lifeInsuranceFinalFee;
+        this.finalBalanceFinalFee = finalBalanceFinalFee;
         this.interest = interest;
         this.lifeInsurance = lifeInsurance;
         this.fee = fee;
