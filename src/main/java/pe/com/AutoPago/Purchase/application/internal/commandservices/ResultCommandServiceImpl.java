@@ -22,9 +22,10 @@ public class ResultCommandServiceImpl implements ResultCommandService {
     public Long handle(CreateResultCommand command) {
         var getCreditByIdQuery = new GetCreditByIdQuery(command.creditId());
         var credit = creditQueryService.handle(getCreditByIdQuery).orElseThrow();
-        var result = new Result(command.n(), command.graceType(), command.cok(), command.interest(), command.lifeInsurance(), command.fee(), command.amortization(),
-                command.balance(), command.finalBalance(), command.flow(),command.riskInsurance(),command.gps(),
-                command.ports(),command.adminBills(), credit);
+        var result = new Result(command.n(), command.graceType(), command.cok(), command.balanceFinalFee(), command.interestFinalFee(),
+                command.amortizationFinalFee(), command.lifeInsuranceFinalFee(), command.finalBalanceFinalFee(), command.interest(),
+                command.lifeInsurance(), command.fee(), command.amortization(), command.balance(), command.finalBalance(),
+                command.flow(),command.riskInsurance(),command.gps(), command.ports(),command.adminBills(), credit);
         resultRepository.save(result);
         return result.getId();
     }

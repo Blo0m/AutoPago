@@ -26,7 +26,11 @@ public class Credit {
 
     @PositiveOrZero
     @Getter
-    private Long initialFeeAmount;
+    private Long initialFeePercentage;
+
+    @PositiveOrZero
+    @Getter
+    private Long finalFeePercentage;
 
     @Getter
     private String url;
@@ -85,14 +89,15 @@ public class Credit {
     public Credit() {
     }
 
-    public Credit(String currency, Long vehiclePrice, Long feeNumber, Long initialFeeAmount, String url, String gracePeriodType,
+    public Credit(String currency, Long vehiclePrice, Long feeNumber, Long initialFeePercentage, Long finalFeePercentage, String url, String gracePeriodType,
                   Long gracePeriodFeeNumber, String interestRateType, Long interestRatePercentage, Long notarialCost, Long registerCost,
                   Long gps, Long ports, Long administrationBills, Long lifeInsurancePercentage, Long riskInsurancePercentage,
                   Long cok, String initialDate, String finalDate) {
         this.currency = currency;
         this.vehiclePrice = vehiclePrice;
         this.feeNumber = feeNumber;
-        this.initialFeeAmount = initialFeeAmount;
+        this.initialFeePercentage = initialFeePercentage;
+        this.finalFeePercentage = finalFeePercentage;
         this.url = url;
         this.gracePeriodType = gracePeriodType;
         this.gracePeriodFeeNumber = gracePeriodFeeNumber;
